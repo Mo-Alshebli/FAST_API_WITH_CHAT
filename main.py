@@ -52,12 +52,9 @@ class ArabicChatBot:
 
 chatbot = ArabicChatBot()
 
-@app.get("/get_response")
+@app.post("/get_response")
 async def get_response(query: str):
     response = chatbot.run(query)
     print(response)
     return {"response": response}
 
-if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run(app, host="127.0.0.1", port=8000)
