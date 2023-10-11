@@ -52,7 +52,7 @@ class ArabicChatBot:
 
 chatbot = ArabicChatBot()
 
-@app.post("/get_response")
+@app.get("/get_response")
 async def get_response(query: str):
     response = chatbot.run(query)
     print(response)
